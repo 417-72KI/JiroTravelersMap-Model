@@ -1,11 +1,11 @@
 import Foundation
 
 public extension Shop {
-    static func decode(_ data: Data) throws -> Shop {
+    static func decode(from data: Data) throws -> Shop {
         try decoder.decode(Shop.self, from: data)
     }
 
-    static func decode(_ data: Data) throws -> [Shop] {
+    static func decodeArray(from data: Data) throws -> [Shop] {
         try decoder.decode([Shop].self, from: data)
     }
 }
